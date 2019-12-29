@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B605F3A223B8D265002077DC /* GameEndedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605F3A123B8D265002077DC /* GameEndedState.swift */; };
+		B605F3A423B90656002077DC /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605F3A323B90656002077DC /* Copying.swift */; };
 		B623F58423B7B26F00F2BAE5 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623F58323B7B26F00F2BAE5 /* GameState.swift */; };
 		B623F58623B7B34200F2BAE5 /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623F58523B7B34200F2BAE5 /* PlayerInputState.swift */; };
 		F874E4712224621100364CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874E4702224621100364CAE /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		B605F3A123B8D265002077DC /* GameEndedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndedState.swift; sourceTree = "<group>"; };
+		B605F3A323B90656002077DC /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
 		B623F58323B7B26F00F2BAE5 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B623F58523B7B34200F2BAE5 /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
 		F874E46D2224621100364CAE /* XO-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XO-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 				F874E4702224621100364CAE /* AppDelegate.swift */,
 				F874E4722224621100364CAE /* GameViewController.swift */,
 				F874E4F02225DFF700364CAE /* Referee.swift */,
+				B605F3A323B90656002077DC /* Copying.swift */,
 				B623F58223B7B25000F2BAE5 /* State */,
 				F874E4E62225CB3F00364CAE /* Models */,
 				F874E4E52225CB3100364CAE /* Views */,
@@ -211,6 +214,7 @@
 				F874E4DF2225C76000364CAE /* MarkView.swift in Sources */,
 				F874E4F12225DFF700364CAE /* Referee.swift in Sources */,
 				F874E4F52225E2CD00364CAE /* Gameboard.swift in Sources */,
+				B605F3A423B90656002077DC /* Copying.swift in Sources */,
 				F874E4712224621100364CAE /* AppDelegate.swift in Sources */,
 				F874E4E22225CABF00364CAE /* OView.swift in Sources */,
 				F874E4F32225E0B100364CAE /* GameboardSize.swift in Sources */,
