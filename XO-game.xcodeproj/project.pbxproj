@@ -61,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B605F3A523B90FAC002077DC /* Prototype */ = {
+			isa = PBXGroup;
+			children = (
+				B605F3A323B90656002077DC /* Copying.swift */,
+			);
+			path = Prototype;
+			sourceTree = "<group>";
+		};
 		B623F58223B7B25000F2BAE5 /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +101,7 @@
 				F874E4702224621100364CAE /* AppDelegate.swift */,
 				F874E4722224621100364CAE /* GameViewController.swift */,
 				F874E4F02225DFF700364CAE /* Referee.swift */,
-				B605F3A323B90656002077DC /* Copying.swift */,
+				B605F3A523B90FAC002077DC /* Prototype */,
 				B623F58223B7B25000F2BAE5 /* State */,
 				F874E4E62225CB3F00364CAE /* Models */,
 				F874E4E52225CB3100364CAE /* Views */,
