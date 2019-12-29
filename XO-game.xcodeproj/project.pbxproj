@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B605F3A223B8D265002077DC /* GameEndedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605F3A123B8D265002077DC /* GameEndedState.swift */; };
+		B623F58423B7B26F00F2BAE5 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623F58323B7B26F00F2BAE5 /* GameState.swift */; };
+		B623F58623B7B34200F2BAE5 /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623F58523B7B34200F2BAE5 /* PlayerInputState.swift */; };
 		F874E4712224621100364CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874E4702224621100364CAE /* AppDelegate.swift */; };
 		F874E4732224621100364CAE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874E4722224621100364CAE /* GameViewController.swift */; };
 		F874E4762224621100364CAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F874E4742224621100364CAE /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B605F3A123B8D265002077DC /* GameEndedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndedState.swift; sourceTree = "<group>"; };
+		B623F58323B7B26F00F2BAE5 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		B623F58523B7B34200F2BAE5 /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
 		F874E46D2224621100364CAE /* XO-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XO-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F874E4702224621100364CAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F874E4722224621100364CAE /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B623F58223B7B25000F2BAE5 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				B623F58323B7B26F00F2BAE5 /* GameState.swift */,
+				B623F58523B7B34200F2BAE5 /* PlayerInputState.swift */,
+				B605F3A123B8D265002077DC /* GameEndedState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
 		F874E4642224621100364CAE = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +91,7 @@
 				F874E4702224621100364CAE /* AppDelegate.swift */,
 				F874E4722224621100364CAE /* GameViewController.swift */,
 				F874E4F02225DFF700364CAE /* Referee.swift */,
+				B623F58223B7B25000F2BAE5 /* State */,
 				F874E4E62225CB3F00364CAE /* Models */,
 				F874E4E52225CB3100364CAE /* Views */,
 				F874E4772224621300364CAE /* Assets.xcassets */,
@@ -147,6 +164,7 @@
 				TargetAttributes = {
 					F874E46C2224621100364CAE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -186,6 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B605F3A223B8D265002077DC /* GameEndedState.swift in Sources */,
+				B623F58623B7B34200F2BAE5 /* PlayerInputState.swift in Sources */,
 				F874E4732224621100364CAE /* GameViewController.swift in Sources */,
 				F874E4DD2225C25D00364CAE /* GameboardPosition.swift in Sources */,
 				F874E4DF2225C76000364CAE /* MarkView.swift in Sources */,
@@ -195,6 +215,7 @@
 				F874E4E22225CABF00364CAE /* OView.swift in Sources */,
 				F874E4F32225E0B100364CAE /* GameboardSize.swift in Sources */,
 				F874E4E42225CB0700364CAE /* XView.swift in Sources */,
+				B623F58423B7B26F00F2BAE5 /* GameState.swift in Sources */,
 				F874E4DB2225C1AC00364CAE /* GameboardView.swift in Sources */,
 				F874E4EF2225DE4500364CAE /* Player.swift in Sources */,
 			);
@@ -351,7 +372,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "plasmon.XO-game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -369,7 +390,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "plasmon.XO-game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
