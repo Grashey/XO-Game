@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		B605F3A223B8D265002077DC /* GameEndedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605F3A123B8D265002077DC /* GameEndedState.swift */; };
 		B605F3A423B90656002077DC /* Copying.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605F3A323B90656002077DC /* Copying.swift */; };
+		B605F3AA23BA4AC4002077DC /* LogCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605F3A923BA4AC4002077DC /* LogCommand.swift */; };
+		B605F3AC23BA4BB4002077DC /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605F3AB23BA4BB4002077DC /* Logger.swift */; };
+		B605F3AE23BA4C71002077DC /* LoggerInvoker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B605F3AD23BA4C71002077DC /* LoggerInvoker.swift */; };
 		B623F58423B7B26F00F2BAE5 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623F58323B7B26F00F2BAE5 /* GameState.swift */; };
 		B623F58623B7B34200F2BAE5 /* PlayerInputState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B623F58523B7B34200F2BAE5 /* PlayerInputState.swift */; };
 		F874E4712224621100364CAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F874E4702224621100364CAE /* AppDelegate.swift */; };
@@ -30,6 +33,9 @@
 /* Begin PBXFileReference section */
 		B605F3A123B8D265002077DC /* GameEndedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndedState.swift; sourceTree = "<group>"; };
 		B605F3A323B90656002077DC /* Copying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Copying.swift; sourceTree = "<group>"; };
+		B605F3A923BA4AC4002077DC /* LogCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCommand.swift; sourceTree = "<group>"; };
+		B605F3AB23BA4BB4002077DC /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B605F3AD23BA4C71002077DC /* LoggerInvoker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerInvoker.swift; sourceTree = "<group>"; };
 		B623F58323B7B26F00F2BAE5 /* GameState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B623F58523B7B34200F2BAE5 /* PlayerInputState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerInputState.swift; sourceTree = "<group>"; };
 		F874E46D2224621100364CAE /* XO-game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XO-game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +75,16 @@
 			path = Prototype;
 			sourceTree = "<group>";
 		};
+		B605F3A823BA4A97002077DC /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				B605F3A923BA4AC4002077DC /* LogCommand.swift */,
+				B605F3AB23BA4BB4002077DC /* Logger.swift */,
+				B605F3AD23BA4C71002077DC /* LoggerInvoker.swift */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
 		B623F58223B7B25000F2BAE5 /* State */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +117,7 @@
 				F874E4702224621100364CAE /* AppDelegate.swift */,
 				F874E4722224621100364CAE /* GameViewController.swift */,
 				F874E4F02225DFF700364CAE /* Referee.swift */,
+				B605F3A823BA4A97002077DC /* Command */,
 				B605F3A523B90FAC002077DC /* Prototype */,
 				B623F58223B7B25000F2BAE5 /* State */,
 				F874E4E62225CB3F00364CAE /* Models */,
@@ -226,6 +243,9 @@
 				F874E4712224621100364CAE /* AppDelegate.swift in Sources */,
 				F874E4E22225CABF00364CAE /* OView.swift in Sources */,
 				F874E4F32225E0B100364CAE /* GameboardSize.swift in Sources */,
+				B605F3AE23BA4C71002077DC /* LoggerInvoker.swift in Sources */,
+				B605F3AA23BA4AC4002077DC /* LogCommand.swift in Sources */,
+				B605F3AC23BA4BB4002077DC /* Logger.swift in Sources */,
 				F874E4E42225CB0700364CAE /* XView.swift in Sources */,
 				B623F58423B7B26F00F2BAE5 /* GameState.swift in Sources */,
 				F874E4DB2225C1AC00364CAE /* GameboardView.swift in Sources */,
