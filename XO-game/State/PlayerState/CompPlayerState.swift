@@ -10,11 +10,9 @@ import Foundation
 
 public class CompPlayerState: PlayerState {
     
-    private(set) weak var gameboard: Gameboard?
     private(set) weak var gameboardView: GameboardView?
     
-    init(gameboard: Gameboard, gameboardView: GameboardView) {
-        self.gameboard = gameboard
+    init(gameboardView: GameboardView) {
         self.gameboardView = gameboardView
     }
     

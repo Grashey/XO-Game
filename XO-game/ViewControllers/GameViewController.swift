@@ -72,7 +72,7 @@ class GameViewController: UIViewController {
                                                  gameboard: gameboard,
                                                  gameboardView: gameboardView)
             if isComp {
-                let comp = CompPlayerState(gameboard: gameboard, gameboardView: gameboardView)
+                let comp = CompPlayerState(gameboardView: gameboardView)
                 if player == Player.second {
                     comp.placeRandom()
                 }
