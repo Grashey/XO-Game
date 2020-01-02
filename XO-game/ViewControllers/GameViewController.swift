@@ -60,6 +60,10 @@ class GameViewController: UIViewController {
             self.currentState = GameEndedState(winner: winner, gameViewController: self)
             return
         }
+        if gameboardView.markViewForPosition.count == 9 {
+            let player = self.referee.determineWinner()
+            self.currentState = GameEndedState(winner: player, gameViewController: self)
+        }
         if let playerInputState = currentState as? PlayerInputState {
             let player = playerInputState.player.next
             self.currentState = PlayerInputState(player: playerInputState.player.next,
@@ -67,8 +71,6 @@ class GameViewController: UIViewController {
                                                  gameViewController: self,
                                                  gameboard: gameboard,
                                                  gameboardView: gameboardView)
-            
-            
             if isComp {
                 let comp = CompPlayerState(gameboard: gameboard, gameboardView: gameboardView)
                 if player == Player.second {
