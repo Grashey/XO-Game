@@ -32,6 +32,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkZ-CU-PS3">
                                 <rect key="frame" x="97" y="331" width="181" height="30"/>
                                 <state key="normal" title="Игра против компьютера"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="vsCompSegue" modalPresentationStyle="fullScreen" id="3d7-s5-nsq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45975333452224731" green="0.90772438049316406" blue="0.87681740522384644" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,4 +153,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3d7-s5-nsq"/>
+    </inferredMetricsTieBreakers>
 </document>

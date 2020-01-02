@@ -10,6 +10,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     
+    public var isComp = false
     private let gameboard = Gameboard()
     private var currentState: GameState! {
         didSet {
@@ -43,7 +44,6 @@ class GameViewController: UIViewController {
         self.gameboardView.clear()
         self.goToFirstState()
         LogAction.log(.restartGame)
-        
     }
     
     private func goToFirstState() {
@@ -67,6 +67,14 @@ class GameViewController: UIViewController {
                                                  gameViewController: self,
                                                  gameboard: gameboard,
                                                  gameboardView: gameboardView)
+            
+            
+            if isComp {
+                let comp = CompPlayerState(gameboard: gameboard, gameboardView: gameboardView)
+                if player == Player.second {
+                    comp.placeRandom()
+                }
+            }
         }
     }
 }

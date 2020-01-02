@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     @IBAction func vsPlayerButton(_ sender: UIButton) {
     }
     
-    @IBAction func vsCompButton(_ sender: Any) {
+    @IBAction func vsCompButton(_ sender: UIButton) {
     }
 
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
@@ -23,5 +23,11 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "vsCompSegue" {
+            let vc = segue.destination as? GameViewController
+            vc?.isComp = true
+        }
+    }
 }
