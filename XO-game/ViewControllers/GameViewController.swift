@@ -12,7 +12,7 @@ class GameViewController: UIViewController {
     
     public var isComp = false
     private let gameboard = Gameboard()
-    private var currentState: GameState! {
+    var currentState: GameState! {
         didSet {
             self.currentState.begin()
         }
@@ -64,20 +64,8 @@ class GameViewController: UIViewController {
             let player = self.referee.determineWinner()
             self.currentState = GameEndedState(winner: player, gameViewController: self)
         }
-        if let playerInputState = currentState as? PlayerInputState {
-            let player = playerInputState.player.next
-            self.currentState = PlayerInputState(player: playerInputState.player.next,
-                                                 markViewPrototype: player.markViewPrototype,
-                                                 gameViewController: self,
-                                                 gameboard: gameboard,
-                                                 gameboardView: gameboardView)
-            if isComp {
-                let comp = CompPlayerState(gameboardView: gameboardView)
-                if player == Player.second {
-                    comp.placeRandom()
-                }
-            }
-        }
+        let reciever = Reciever()
+        reciever.placeMark(gameboard: gameboard, gameboardView: gameboardView, gameViewController: self, isComp: isComp)
     }
 }
 

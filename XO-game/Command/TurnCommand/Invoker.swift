@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class Invoker {
+    
+    public var turnsCount = 1
+    public var overrideMark = false
+    private let reciever = Reciever()
+    
+    private var commands: [GameboardPosition: MarkView] = [:]
+    
+ 
+    
+}

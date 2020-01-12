@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class Command {
+    
+    func execute(position: GameboardPosition, playerInputState: PlayerInputState){
+        playerInputState.gameboard?.setPlayer(playerInputState.player, at: position)
+        playerInputState.gameboardView?.placeMarkView(playerInputState.markViewPrototype.copy(), at: position)
+    }
+}
