@@ -1,0 +1,71 @@
+//
+//  GameViewController.swift
+//  XO-game
+//
+//  Created by Evgeny Kireev on 25/02/2019.
+//  Copyright © 2019 plasmon. All rights reserved.
+//
+
+import UIKit
+
+class GameViewController: UIViewController {
+    
+    public var isComp = false
+    private let gameboard = Gameboard()
+    var currentState: GameState! {
+        didSet {
+            self.currentState.begin()
+        }
+    }
+    private lazy var referee = Referee(gameboard: self.gameboard)
+
+    @IBOutlet var gameboardView: GameboardView!
+    @IBOutlet var firstPlayerTurnLabel: UILabel!
+    @IBOutlet var secondPlayerTurnLabel: UILabel!
+    @IBOutlet var winnerLabel: UILabel!
+    @IBOutlet var restartButton: UIButton!
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.goToFirstState()
+        
+        gameboardView.onSelectPosition = { [weak self] position in
+            guard let self = self else { return }
+            self.currentState.addMark(at: position)
+            if self.currentState.isCompleted {
+                self.goToNextState()
+            }
+        }
+    }
+    
+    @IBAction func restartButtonTapped(_ sender: UIButton) {
+        self.gameboard.clear()
+        self.gameboardView.clear()
+        self.goToFirstState()
+        LogAction.log(.restartGame)
+    }
+    
+    private func goToFirstState() {
+        let player = Player.first
+        self.currentState = PlayerInputState(player: .first,
+                                             markViewPrototype: player.markViewPrototype,
+                                             gameViewController: self,
+                                             gameboard: gameboard,
+                                             gameboardView: gameboardView)
+    }
+
+    private func goToNextState() {
+        if let winner = self.referee.determineWinner() {
+            self.currentState = GameEndedState(winner: winner, gameViewController: self)
+            return
+        }
+        if gameboardView.markViewForPosition.count == 9 {
+            let player = self.referee.determineWinner()
+            self.currentState = GameEndedState(winner: player, gameViewController: self)
+        }
+        let reciever = Reciever()
+        reciever.placeMark(gameboard: gameboard, gameboardView: gameboardView, gameViewController: self, isComp: isComp)
+    }
+}
+
